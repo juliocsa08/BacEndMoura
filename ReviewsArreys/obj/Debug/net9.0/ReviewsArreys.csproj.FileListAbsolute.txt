@@ -1,0 +1,15 @@
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\bin\Debug\net9.0\ReviewsArreys.exe
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\bin\Debug\net9.0\ReviewsArreys.deps.json
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\bin\Debug\net9.0\ReviewsArreys.runtimeconfig.json
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\bin\Debug\net9.0\ReviewsArreys.dll
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\bin\Debug\net9.0\ReviewsArreys.pdb
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.AssemblyInfoInputs.cache
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.AssemblyInfo.cs
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.csproj.CoreCompileInputs.cache
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.sourcelink.json
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.dll
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\refint\ReviewsArreys.dll
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.pdb
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ReviewsArreys.genruntimeconfig.cache
+C:\Users\56753478876\Desktop\BeckEndMoura\ReviewsArreys\obj\Debug\net9.0\ref\ReviewsArreys.dll
