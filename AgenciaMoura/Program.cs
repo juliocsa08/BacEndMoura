@@ -114,7 +114,7 @@ void Transferir()
     Console.Write($"Valor para transferir: ");
     float valor = float.Parse(Console.ReadLine());
 
-    if (saldos[idDestino] >= valor && valor > 0)
+    if (saldos[idOrigem] >= valor && valor > 0)
     {
         saldos[idOrigem] -= valor;
         saldos[idDestino] += valor;
@@ -140,7 +140,7 @@ int BuscarCliente()
     //listar cliente
     ListarCliente();
     //pedir pro usuário escolher o cliente
-    Console.WriteLine($"Digite o número do clinete: ");
+    Console.WriteLine($"Digite o número do cliente: ");
     int idCliente = int.Parse(Console.ReadLine());
     if (idCliente < 0 || idCliente >= totalClientes)
     {
