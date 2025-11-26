@@ -8,7 +8,7 @@ namespace Exercicio02
         public int DiasAtraso = 0;
         private float Juros = 0.10f;
         
-        // Construtor da classe
+        
         public Fatura(string nomeDevedor, string nomeEmpresa, float valorFatura, int qtdDiasAtraso)
         {
             Devedor = nomeDevedor;

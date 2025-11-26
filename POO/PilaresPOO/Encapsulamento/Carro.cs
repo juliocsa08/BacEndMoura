@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using System;
+
+class Carro
+{
+   
+    private string marca;
+    private string modelo;
+    private int velocidadeAtual;
+
+   
+    public void DefinirMarca(string valor)
+    {
+        marca = valor;
+    }
+
+    public string ObterMarca()
+    {
+        return marca;
+    }
+
+   
+    public void DefinirModelo(string valor)
+    {
+        modelo = valor;
+    }
+
+    public string ObterModelo()
+    {
+        return modelo;
+    }
+
+ 
+    public int ObterVelocidade()
+    {
+        return velocidadeAtual;
+    }
+
+    
+    public void Acelerar(int valor)
+    {
+        velocidadeAtual += valor;
+    }
+
+   
+    public void Frear(int valor)
+    {
+        velocidadeAtual -= valor;
+       if(velocidadeAtual < 0)
+        {
+            velocidadeAtual = 500;
+        }
+       
+    }
+}
+
+
+
+
+ 

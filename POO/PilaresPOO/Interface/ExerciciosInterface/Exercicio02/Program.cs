@@ -1,162 +1,153 @@
-﻿using Exercicio02;
-
-// // criar uma lista para faturas
- 
-
-// // Cria um objeto de casa classe e adiciona nas listas
-// Fatura fatJU = new Fatura();
-// documentos.Add(fatJU);
-// Fatura fatJU = new Fatura();
-// documentos.Add(fatJU);
-
-// Relatorio relJU = new Relatorio();
-// documentos.Add(relJU);
-// Relatorio reJU = new Relatorio();
-// documentos.Add(reJU);
-
-// Contrato contJU = new Contrato();
-// documentos.Add(contJU);
-// Contrato contJU = new Contrato();
-// documentos.Add(contJU);
-
-
-// Console.WriteLine($"Faturas: ");
-// foreach (var fatura in documentos)
-// {
-//     if (fatura is Fatura)
-//     {
-//         fatura.Imprimir();
-//     }
-// }
-
-// Console.WriteLine($"Contraros: ");
-// foreach (var contrato in documentos)
-// {
-//     if (contrato is Contrato)
-//     {
-//         contrato.Imprimir();
-//     }
-// }
-
-// Console.WriteLine($"Relatorios: ");
-// foreach (var relatorio in documentos)
-// {
-//     if (relatorio is Relatorio)
-//     {
-//         relatorio.Imprimir();
-//     }
-// }
-// criar uma lista para faturas
-List<IImprimivel> documentos = new List<IImprimivel>();
+﻿using System.Data;
+using System.Reflection;
+using Exercicio02;
+// List<Fatura> listafatura = new List<Fatura>();
+// List<Relatorio> listaRelatorio = new List<Relatorio>();
+// List<Contrato> listaContrato = new List<Contrato>();
+List<IImprimir> Documentos = new List<IImprimir>();
 
 int opcao;
 
 do
 {
     Console.Clear();
-    Console.WriteLine($@"Menu de Opções
-    1) Cadastrar Fatura);
-    2) Cadastrar Relatorio
+    Console.WriteLine($@"====== Menu de opções ======
+    
+    1) Cadastrar Fatura
+    2) Cadastrar Relatório
     3) Cadastrar Contrato
-    4) Listar Faturas
-    5) Listar Relatorios
+    4) Listas Faturas
+    5) Listar Relatórios
     6) Listar Contratos
-    0) Sair
-    Escolha a opção:
-    ");
+    0) Sair");
+
     opcao = int.Parse(Console.ReadLine());
 
-    //criar um swith case para as opções do menu
     switch (opcao)
     {
         case 1:
             CadastrarFaturas();
             break;
+
         case 2:
             CadastrarRelatorios();
             break;
+
         case 3:
-           CadastrarContratos();
+            CadastrarContratos();
             break;
+
         case 4:
-           ListarFaturas();
+            ListarFaturas();
             break;
+
         case 5:
-            ListarRelatorio();
+            ListarRelatorios();
             break;
+
         case 6:
-           ListarContratos();
+            ListarContratos();
             break;
+
         case 0:
             Console.WriteLine($"Sair");
             break;
+
         default:
-        Console.WriteLine($"Opção Inválida");
+            Console.WriteLine($"Opção Inválida");
             break;
+
     }
 
-
-    Console.WriteLine($"Pressione <ENTER> para continuar");
+    Console.WriteLine($"Pressione <<Enter>> para continuar");
     Console.ReadLine();
-
 
 } while (opcao != 0);
 
+
+
 void CadastrarFaturas()
 {
- Console.WriteLine($"Digite o nome do cliente devedor");
- string dev = Console.ReadLine();
- Console.WriteLine($"Digite o nome da empresa");
- string empresa = Console.ReadLine();
- Console.WriteLine($"Digite o valor da fatura");
- float valor = float.Parse(Console.ReadLine());
- Console.WriteLine($"Digite os dias de atraso da fatura");
- int qtdDiasAtrado =int.Parse(Console.ReadLine());
+    Console.WriteLine($"Digite o nome do cliente devedor");
+    string dev = Console.ReadLine();
 
-Fatura fat = new Fatura(dev, empresa, valor, qtdDiasAtrado);
-documentos.Add(fat);
-}
-void CadastrarContratos()
-{
+    Console.WriteLine($"Digite o nome da empresa");
+    string empresa = Console.ReadLine();
+
+    Console.WriteLine($"Digite o valor da fatura");
+    float Valor = float.Parse(Console.ReadLine());
+
+    Console.WriteLine($"Dias de atraso da fatura");
+    int QtdDiasAtraso = int.Parse(Console.ReadLine());
     
-
-
+    Fatura fat = new Fatura(dev, empresa, Valor, QtdDiasAtraso);
+    Documentos.Add(fat);
 }
+
 void CadastrarRelatorios()
 {
     
+    Console.WriteLine($"Digite o nome do responsável");
+    string NomeResponsavel = Console.ReadLine();
 
+    Console.WriteLine($"Digite o texto do relatorio");
+    string TextoRelatorio = Console.ReadLine();
+
+    Relatorio Rel = new Relatorio(NomeResponsavel, TextoRelatorio);
+    Documentos.Add(Rel);
 
 }
-void ListarContratos()
+
+void CadastrarContratos()
 {
+    Console.WriteLine($"Digite o nome do contrato");
+    string Nome = Console.ReadLine();
+
+    Console.WriteLine($"Digite a clausula do contrato");
+    string TextoClausulas = Console.ReadLine();
     
-
-
+    Contrato Con = new Contrato(Nome, TextoClausulas);
+    Documentos.Add(Con);
+    
 }
+
 void ListarFaturas()
 {
-  Console.WriteLine($"Listando Faturas:");
-  foreach(Fatura item in documentos)
+    Console.WriteLine($"Listando Faturas:");
+    foreach (var item in Documentos)
     {
-     if(item is Fatura)
-
+        if (item is Fatura)
         {
-           item.Imprimir(); 
+            item.Imprimir();
+        }
+    }
+}
 
-        }   
-
-
+void ListarRelatorios()
+{
+    Console.WriteLine($"Listando Relatórios:");
+    foreach (var item in Documentos)
+    {
+        if (item is Relatorio)
+        {
+            item.Imprimir();
+        }
     }
     
-
-
 }
-void ListarRelatorio()
+
+void ListarContratos()
 {
+    Console.WriteLine($"Listando Contratos:");
+    foreach (var item in Documentos)
+    {
+        
+        if (item is Contrato)
+        {
+            item.Imprimir();
+        }
+    }
     
-
-
 }
 
 
@@ -164,3 +155,82 @@ void ListarRelatorio()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fatura fatJV = new Fatura();
+// Documentos.Add(fatJV);
+
+// Fatura Ale = new Fatura();
+// Documentos.Add(Ale);
+
+
+
+// Relatorio relJV = new Relatorio();
+// Documentos.Add(relJV);
+
+// Relatorio Alex = new Relatorio();
+// Documentos.Add(Alex);
+
+
+// Contrato conJV = new Contrato();
+// Documentos.Add(conJV);
+
+// Contrato Edu = new Contrato();
+// Documentos.Add(Edu);
+
+
+// // fatRafa.Imprimir();
+// // relRafa.Imprimir();
+// // conRafa.Imprimir();
+
+
+// //Listar os Dados 
+// // for(int i = 0; i < listafatura.Count; i++)
+// // {
+// //     listafatura[i].Imprimir();
+// // }
+// Console.WriteLine($"FATURAS");
+// foreach (var fat in Documentos)
+// {
+//     if (fat is Fatura)
+//     {
+//         fat.Imprimir();
+//     }
+
+// }
+
+// Console.WriteLine($"");
+
+// Console.WriteLine($"RELATÓRIOS");
+// foreach (var rel in Documentos)
+// {
+//     if (rel is Relatorio)
+//     {
+//         rel.Imprimir();
+//     }
+
+// }
+
+// Console.WriteLine($"");
+
+// Console.WriteLine($"CONTRATOS");
+// foreach (var con in Documentos)
+// {
+//     if (con is Contrato)
+//     {
+//         con.Imprimir();
+//     }
+
+//
