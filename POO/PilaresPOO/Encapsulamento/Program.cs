@@ -16,20 +16,17 @@
 //  Console.WriteLine($"Saldo atual da madu: R${contamadu.GetSaldo()}");
  
 
-        
-    Carro meuCarro = new Carro();
-    
-    meuCarro.DefinirMarca("Toyota");
-    meuCarro.DefinirModelo("Corolla");
+   Carro carro = new Carro();
 
-    meuCarro.Acelerar(50);   
-    meuCarro.Acelerar(30);  
-    meuCarro.Frear(20);      
-    meuCarro.Frear(70);      
+carro.DefinirMarca("Toyota");
+carro.DefinirModelo("Corolla");
 
-        Console.WriteLine();
+carro.Acelerar(30);
+carro.Acelerar(20);
+carro.Frear(10);
+carro.Frear(50); 
 
-    Console.WriteLine("Marca: " + meuCarro.ObterMarca());
-    Console.WriteLine("Modelo: " + meuCarro.ObterModelo());
-    Console.WriteLine("Velocidade Atual: " + meuCarro.ObterVelocidade() + " km/h");
-    
+
+Console.WriteLine($"Marca: {carro.ObterMarca()}");
+Console.WriteLine($"Modelo:  {carro.ObterModelo()}");
+Console.WriteLine($"Velocidade Atual:  {carro.ObterVelocidade()}km/h");
