@@ -15,11 +15,14 @@ namespace CrudMoura.Controllers
                 new Aluno {Id = 4, Nome = "Maria", Idade = 17, Sala = "2A", Cidade = "SP"},
             };
         private readonly ILogger<AlunoController> _logger;
+        private readonly CrudMouraContext _context;
 
-        public AlunoController(ILogger<AlunoController> logger)
+        public AlunoController(ILogger<AlunoController> logger, CrudMouraContext context)
         {
             _logger = logger;
+            _context = context;
         }
+        
 
         public IActionResult Index()
         {

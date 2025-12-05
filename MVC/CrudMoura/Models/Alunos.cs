@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CrudMoura.Models
 {
-    public class Aluno
+    public class Alunos
     {
         public int Id { get; set; }
         public string Nome { get; set; }
